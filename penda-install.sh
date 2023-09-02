@@ -14,7 +14,8 @@ w="\e[1;37m"
 
 ###############################give Permissons,if not root user exit
 
-[[ `id -u` -eq 0 ]] > /dev/null 2>&1 || { echo -e ${m} "You must be root to run the script${n}"; echo ; exit 0}
+clear
+[[ `id -u` -eq 0 ]] > /dev/null 2>&1 || { echo -e ${m} "You must be root to run the script${n}"; echo ; exit 1; }
 
 if [ -d /data/data/com.termux/files/usr/share ];then
    if [ -d /data/data/com.termux/files/usr/share/penda_pl ];then
@@ -23,7 +24,7 @@ if [ -d /data/data/com.termux/files/usr/share ];then
    else
       echo -e ${k}"Installing For Termux..."
       cd ~/../usr/share/
-      git clone https://github.com/krish-coder-24/Penda-Official.git penda_pl > Log.log
+      git clone https://github.com/krish-coder-24/Penda-Official.git penda_pl
       mv ~/../usr/share/penda_pl/penda ~/../usr/bin/
       chmod +x ../bin/penda
       mkdir ~/.penda
@@ -31,7 +32,6 @@ if [ -d /data/data/com.termux/files/usr/share ];then
       cd
       echo -e ${h} "Succesfully Installed !!"
    fi
-fi
 
 elif [ -d /usr/share ];then
    if [ -d /usr/share/penda_pl ];then
@@ -41,11 +41,11 @@ elif [ -d /usr/share ];then
    else
       echo -e ${k} "Installing For kali ..."
       cd /usr/share/
-      git clone https://github.com/krish-coder-24/Penda-Official.git penda_pl > Log.log
+      git clone https://github.com/krish-coder-24/Penda-Official.git penda_pl
       mv /usr/share/penda_pl/penda /usr/bin/
       chmod +x ../bin/penda
       mkdir /home/kali/.penda
-      mv /usr/share/penda_pl/penda-install.sh /home/kali/.penda/penda-install.sh 
+      mv /usr/share/penda_pl/penda-install.sh /home/kali/.penda/
       cd
       echo -e ${h} "Succesfully Installed !!"
    fi
