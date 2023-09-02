@@ -1,6 +1,3 @@
-#!/usr/bin/python3.11
-# -*- coding: utf-8 -*-
-
 from lexer import Lexer
 from parse import Parser
 from interpreter import Interpreter
@@ -49,7 +46,7 @@ try:
           os.system(f"bash {__path}/update.sh")
           
        elif currentArgument in ("--uninstall"): 
-          os.system(f"sudo bash /root/.penda/uninstall.sh")
+          os.system(f"sudo bash {__path}/uninstall.sh")
        elif currentArgument is None:
           print("No argument Given")
 
