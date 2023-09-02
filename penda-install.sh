@@ -15,8 +15,6 @@ w="\e[1;37m"
 ###############################give Permissons,if not root user exit
 
 clear
-[[ `id -u` -eq 0 ]] > /dev/null 2>&1 || { echo -e ${m} "You must be root to run the script${n}"; echo ; exit 1; }
-
 if [ -d /data/data/com.termux/files/usr/share ];then
    if [ -d /data/data/com.termux/files/usr/share/penda_pl ];then
       echo -e ${m} "Already Installed !!"
@@ -39,6 +37,7 @@ elif [ -d /usr/share ];then
       exit 0
 
    else
+      [[ `id -u` -eq 0 ]] > /dev/null 2>&1 || { echo -e ${m} "You must be root to run the script${n}"; echo ; exit 1; }
       echo -e ${k} "Installing For kali ..."
       cd /usr/share/
       git clone https://github.com/krish-coder-24/Penda-Official.git penda_pl
