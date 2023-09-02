@@ -1,0 +1,12 @@
+#!/usr/bin/bash
+
+# Tool Name :- Penda-PL
+# Author :- Krish
+# Date :- 1/9/2023
+if [ -d /data/data/com.termux/files/usr/share ];then
+  cd /data/data/com.termux/files/usr/share/penda_pl
+  exec python penda_file.py  $@
+elif [ -d /usr/share ];then
+  cd /usr/share/penda_pl
+  exec python penda_file.py $@
+fi

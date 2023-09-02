@@ -1,0 +1,3 @@
+make a = 30
+make b = 20
+while b <= a do make b = b + 1 
