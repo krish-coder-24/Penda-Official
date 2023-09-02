@@ -16,15 +16,14 @@ w="\e[1;37m"
 
 if [ -d /data/data/com.termux/files ];then
    echo -e ${k}"Updating For Termux..."
-   sudo mv ~/penda_pl ~/../usr/share/
-   sudo mv ~/../usr/share/penda_pl/penda ~/../usr/bin/
+   cd ~/../usr/share/penda_pl 
+   git pull
    echo -e ${h} "Succesfully Updated !!"
 
 elif [ -d /usr/share/ ];then
-   echo -e ${k} "Installing For kali ..."
-   cp -r  /home/kali/penda_pl /root/
-   sudo mv ~/penda_pl /usr/share/
-   sudo mv /usr/share/penda_pl/penda /usr/bin/
-   echo -e ${h} "Succesfully Installed !!"
+   echo -e ${k} "Updating For kali ..."
+   cd /usr/share/penda_pl
+   git pull
+   echo -e ${h} "Succesfully Updated !!"
 
 fi
