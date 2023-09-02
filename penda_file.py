@@ -49,7 +49,7 @@ try:
           os.system(f"bash {__path}/update.sh")
           
        elif currentArgument in ("--uninstall"): 
-          os.system(f"sudo bash ~/.penda/uninstall.sh")
+          os.system(f"sudo bash /root/.penda/uninstall.sh")
        elif currentArgument is None:
           print("No argument Given")
 
