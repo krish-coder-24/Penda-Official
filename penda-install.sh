@@ -14,29 +14,37 @@ w="\e[1;37m"
 
 [[ `id -u` -eq 0 ]] > /dev/null 2>&1 || { echo -e ${m} "You must be root to run the script${n}"; echo ; exit 1; }
 
-if [ -d /data/data/com.termux/files/usr/share/pendal_pl ];then
-   echo -e ${m} "Already Installed !!"
-   exit 0
+if [ -d /data/data/com.termux/files/usr/share ];then
+   if [ -d /data/data/com.termux/files/usr/share/penda_pl ];then
+      echo -e ${m} "Already Installed !!"
+      exit 0
+   else
+      echo -e ${k}"Installing For Termux..."
+      cd ~/../usr/share/
+      git clone https://github.com/krish-coder-24/Penda-Official.git penda_pl > Log.log
+      mv ~/../usr/share/penda_pl/penda ~/../usr/bin/
+      chmod +x ../bin/penda
+      mkdir ~/.penda
+      mv ~/../usr/share/penda_pl/uninstall.sh ~/.penda/
+      mv '~/../usr/share/penda_pl/penda-install.sh' ~/.penda/
+      cd
+      echo -e ${h} "Succesfully Installed !!"
+   fi
 
-elif [ -d /data/data/com.termux/files ];then
-   echo -e ${k}"Installing For Termux..."
-   cd ~/../usr/share/
-   git clone https://github.com/krish-coder-24/Penda-Official.git penda_pl > Log.log
-   mv ~/../usr/share/penda_pl/penda ~/../usr/bin/
-   chmod +x ../bin/penda
-   cd
-   echo -e ${h} "Succesfully Installed !!"
+elif [ -d /usr/share ];then
+   if [ -d /usr/share/penda_pl ];then
+      echo -e ${m} "Already Installed !!"
+      exit 0
 
-elif [ -d /usr/share/pendal_pl ];then
-   echo -e ${m} "Already Installed !!"
-   exit 0
-
-elif [ -d /usr/share/ ];then
-   echo -e ${k} "Installing For kali ..."
-   cd /usr/share/
-   git clone https://github.com/krish-coder-24/Penda-Official.git penda_pl > Log.log
-   mv /usr/share/penda_pl/penda /usr/bin/
-   chmod +x ../bin/penda
-   cd
-   echo -e ${h} "Succesfully Installed !!"
+   else
+      echo -e ${k} "Installing For kali ..."
+      cd /usr/share/
+      git clone https://github.com/krish-coder-24/Penda-Official.git penda_pl > Log.log
+      mv /usr/share/penda_pl/penda /usr/bin/
+      chmod +x ../bin/penda
+      mv /usr/share/penda_pl/uninstall.sh ~/.penda/
+      mv '/usr/share/penda_pl/penda-install.sh' ~/.penda/
+      cd
+      echo -e ${h} "Succesfully Installed !!"
+   fi
 fi
