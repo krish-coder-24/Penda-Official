@@ -44,6 +44,9 @@ try:
 
        elif currentArgument in ('-S', "--shell"):
           os.system(f"python {__path}/shell.py")
+          
+       elif currentArgument is None:
+          print("No argument Given")
 
 except getopt.error as err:
     err = str(err)
