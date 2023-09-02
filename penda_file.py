@@ -9,8 +9,8 @@ from files import get
 import getopt, sys, os, pathlib
 
 argumentList = sys.argv[1:]
-options = "hVf:S"
-long_options = ["help", "version", "file", "shell"]
+options = "hVf:SU"
+long_options = ["help", "version", "file", "shell", "update", "uninstall"]
 
 __path = os.getcwd()
 base = Data()
