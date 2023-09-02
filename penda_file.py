@@ -48,7 +48,7 @@ try:
        elif currentArgument in ('-U', "--update"):
           os.system(f"bash {__path}/update.sh")
           
-       elif currentArgument in ("--unistall"): 
+       elif currentArgument in ("--uninstall"): 
           os.system(f"bash {__path}/uninstall.sh")
        elif currentArgument is None:
           print("No argument Given")
