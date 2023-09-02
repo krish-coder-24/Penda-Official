@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-# Tool Name :- Penda-PL
+# Language Name :- Penda
 # Author :- Krish
 # Date :- 1/9/2023
 if [ -d /data/data/com.termux/files/usr/share ];then
@@ -9,4 +9,6 @@ if [ -d /data/data/com.termux/files/usr/share ];then
 elif [ -d /usr/share ];then
   cd /usr/share/penda_pl
   exec python penda_file.py $@
+elif [ "--uninstall" in $@ ];then
+  exec bash ../share/penda_pl/uninstall.sh
 fi
