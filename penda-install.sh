@@ -14,7 +14,7 @@ w="\e[1;37m"
 
 ###############################give Permissons,if not root user exit
 
-[[ `id -u` -eq 0 ]] > /dev/null 2>&1 || { echo -e ${m} "You must be root to run the script${n}"; echo ; e>
+[[ `id -u` -eq 0 ]] > /dev/null 2>&1 || { echo -e ${m} "You must be root to run the script${n}"; echo ; exit 0}
 
 if [ -d /data/data/com.termux/files/usr/share ];then
    if [ -d /data/data/com.termux/files/usr/share/penda_pl ];then
@@ -31,6 +31,7 @@ if [ -d /data/data/com.termux/files/usr/share ];then
       cd
       echo -e ${h} "Succesfully Installed !!"
    fi
+fi
 
 elif [ -d /usr/share ];then
    if [ -d /usr/share/penda_pl ];then
