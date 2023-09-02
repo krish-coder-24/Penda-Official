@@ -10,12 +10,12 @@ lb="\e[1;34m"     # langit biru     # blue sky
 n="\e[0m"         # netral          # neutral
 
 
-if [ -d /data/data/com.termux/files/usr/share/pendal_pl ];then
+if [ -d /data/data/com.termux/files/usr/share/penda_pl ];then
    echo -e ${k}"Unistalling For Termux..."
    rm -r ~/../usr/share/penda_pl && rm ~/../usr/bin/penda
    echo -e ${h} "Succesfully Uninstalled !!"
 
-elif [ -d /usr/share/pendal_pl ];then
+elif [ -d /usr/share/penda_pl ];then
    echo -e ${k}"Unistalling For Kali..."
    rm -r /usr/share/penda_pl
    rm /usr/bin/penda
