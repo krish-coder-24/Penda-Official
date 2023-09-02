@@ -1,3 +1,5 @@
+
+
 ##############################color
 m="\e[0;31m"      # merah           # red
 k="\e[0;33m"      # kuning          # yellow
@@ -12,7 +14,7 @@ w="\e[1;37m"
 
 ###############################give Permissons,if not root user exit
 
-[[ `id -u` -eq 0 ]] > /dev/null 2>&1 || { echo -e ${m} "You must be root to run the script${n}"; echo ; exit 1; }
+[[ `id -u` -eq 0 ]] > /dev/null 2>&1 || { echo -e ${m} "You must be root to run the script${n}"; echo ; e>
 
 if [ -d /data/data/com.termux/files/usr/share ];then
    if [ -d /data/data/com.termux/files/usr/share/penda_pl ];then
@@ -24,9 +26,6 @@ if [ -d /data/data/com.termux/files/usr/share ];then
       git clone https://github.com/krish-coder-24/Penda-Official.git penda_pl > Log.log
       mv ~/../usr/share/penda_pl/penda ~/../usr/bin/
       chmod +x ../bin/penda
-      mkdir ~/.penda
-      mv ~/../usr/share/penda_pl/uninstall.sh ~/.penda/
-      mv '~/../usr/share/penda_pl/penda-install.sh' ~/.penda/
       cd
       echo -e ${h} "Succesfully Installed !!"
    fi
@@ -42,9 +41,6 @@ elif [ -d /usr/share ];then
       git clone https://github.com/krish-coder-24/Penda-Official.git penda_pl > Log.log
       mv /usr/share/penda_pl/penda /usr/bin/
       chmod +x ../bin/penda
-      mkdir ~/.penda
-      mv /usr/share/penda_pl/uninstall.sh ~/.penda/
-      mv '/usr/share/penda_pl/penda-install.sh' ~/.penda/
       cd
       echo -e ${h} "Succesfully Installed !!"
    fi
