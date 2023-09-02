@@ -26,6 +26,8 @@ if [ -d /data/data/com.termux/files/usr/share ];then
       git clone https://github.com/krish-coder-24/Penda-Official.git penda_pl > Log.log
       mv ~/../usr/share/penda_pl/penda ~/../usr/bin/
       chmod +x ../bin/penda
+      mkdir ~/.penda
+      mv ~/../usr/share/penda_pl/penda-install.sh ~/.penda/ 
       cd
       echo -e ${h} "Succesfully Installed !!"
    fi
@@ -41,6 +43,8 @@ elif [ -d /usr/share ];then
       git clone https://github.com/krish-coder-24/Penda-Official.git penda_pl > Log.log
       mv /usr/share/penda_pl/penda /usr/bin/
       chmod +x ../bin/penda
+      mkdir /home/kali/.penda
+      mv /usr/share/penda_pl/penda-install.sh /home/kali/.penda/penda-install.sh 
       cd
       echo -e ${h} "Succesfully Installed !!"
    fi
