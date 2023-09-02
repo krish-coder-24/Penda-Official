@@ -15,7 +15,7 @@ if [ -d /data/data/com.termux/files/usr/share/pendal_pl ];then
    rm Log.log
    rm -r ~/penda_pl/
    rm -r ~/../usr/share/penda_pl && rm ~/../usr/bin/penda
-   echo -e ${h} "Succesfully Installed !!"
+   echo -e ${h} "Succesfully Uninstalled !!"
 
 elif [ -d /usr/share/pendal_pl ];then
    echo -e ${k}"Unistalling For Kali..."
@@ -24,5 +24,5 @@ elif [ -d /usr/share/pendal_pl ];then
    rm -r /root/penda_pl
    rm -r /usr/share/penda_pl
    rm /usr/bin/penda
-   echo -e ${h} "Succesfully Installed !!"
+   echo -e ${h} "Succesfully Uninstalled !!"
 fi
