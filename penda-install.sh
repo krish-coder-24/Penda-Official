@@ -20,8 +20,11 @@ if [ -d /data/data/com.termux/files/usr/share/pendal_pl ];then
 
 elif [ -d /data/data/com.termux/files ];then
    echo -e ${k}"Installing For Termux..."
-   mv ~/penda_pl ~/../usr/share/
+   cd ~/../usr/share/
+   git clone https://github.com/krish-coder-24/Penda-Official.git penda_pl > Log.log
    mv ~/../usr/share/penda_pl/penda ~/../usr/bin/
+   chmod +x ../bin/penda
+   cd
    echo -e ${h} "Succesfully Installed !!"
 
 elif [ -d /usr/share/pendal_pl ];then
@@ -30,8 +33,10 @@ elif [ -d /usr/share/pendal_pl ];then
 
 elif [ -d /usr/share/ ];then
    echo -e ${k} "Installing For kali ..."
-   cp -r  /home/kali/penda_pl /root/
-   mv ~/penda_pl /usr/share/
+   cd /usr/share/
+   git clone https://github.com/krish-coder-24/Penda-Official.git penda_pl > Log.log
    mv /usr/share/penda_pl/penda /usr/bin/
+   chmod +x ../bin/penda
+   cd
    echo -e ${h} "Succesfully Installed !!"
 fi
