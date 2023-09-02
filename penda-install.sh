@@ -27,6 +27,7 @@ if [ -d /data/data/com.termux/files/usr/share ];then
       chmod +x ../bin/penda
       mkdir ~/.penda
       mv ~/../usr/share/penda_pl/penda-install.sh ~/.penda/ 
+      rm -r ~/penda_pl
       cd
       echo -e ${h} "Succesfully Installed !!"
    fi
@@ -44,6 +45,7 @@ elif [ -d /usr/share ];then
       mv /usr/share/penda_pl/penda /usr/bin/
       chmod +x ../bin/penda
       mkdir /home/kali/.penda
+      rm -r /home/kali/penda_pl
       mv /usr/share/penda_pl/penda-install.sh /home/kali/.penda/
       cd
       echo -e ${h} "Succesfully Installed !!"
