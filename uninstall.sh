@@ -12,16 +12,11 @@ n="\e[0m"         # netral          # neutral
 
 if [ -d /data/data/com.termux/files/usr/share/pendal_pl ];then
    echo -e ${k}"Unistalling For Termux..."
-   rm Log.log
-   rm -r ~/penda_pl/
    rm -r ~/../usr/share/penda_pl && rm ~/../usr/bin/penda
    echo -e ${h} "Succesfully Uninstalled !!"
 
 elif [ -d /usr/share/pendal_pl ];then
    echo -e ${k}"Unistalling For Kali..."
-   rm Log.log
-   rm -r ~/penda_pl/
-   rm -r /root/penda_pl
    rm -r /usr/share/penda_pl
    rm /usr/bin/penda
    echo -e ${h} "Succesfully Uninstalled !!"
