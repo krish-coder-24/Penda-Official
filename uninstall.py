@@ -11,7 +11,7 @@ lb="\e[1;34m"     # langit biru     # blue sky
 n="\e[0m"         # netral          # neutral
 
 def Uninstaller(type):
-   if os.isfile("/data/data/com.termux/files/usr/share/penda_pl/penda_file.py"):
+   if os.path.isfile("/data/data/com.termux/files/usr/share/penda_pl/penda_file.py"):
       if type == "Safe":
          os.system("""
                   echo -e ${k}"Unistalling For Termux..."
@@ -26,7 +26,7 @@ def Uninstaller(type):
                   echo -e ${h} "Succesfully Uninstalled !!"
                   """)
 
-   elif os.isfile("/usr/share/penda_pl/penda_file.py"):
+   elif os.path.isfile("/usr/share/penda_pl/penda_file.py"):
       if type == "Safe":
          os.system("""
                   echo -e ${k}"Unistalling Penda For Linux..."
