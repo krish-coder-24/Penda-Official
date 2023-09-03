@@ -46,7 +46,12 @@ try:
           os.system(f"python {__path}/shell.py")
           
        elif currentArgument in ('-U', "--update"):
-          os.system(f"bash {__path}/update.sh")
+         if os.path.isfile("/usr/share"):
+            os.system(f"bash /root/.penda/update.sh")
+         elif os.path.isfile("/data/data/com.termux"):
+            os.system("bash ~/.penda/update.sh")
+         elif os.path.isfile("C:/Windows/System32"):
+            os.system(f"bash {__path}/update.sh")
           
        elif currentArgument in ("--uninstall"): 
           os.system(f"sudo bash {__path}/uninstall.sh")
