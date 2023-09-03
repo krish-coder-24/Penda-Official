@@ -4,6 +4,7 @@ from interpreter import Interpreter
 from data import Data
 from files import get
 import getopt, sys, os, pathlib
+from uninstall import Uninstaller
 
 argumentList = sys.argv[1:]
 options = "hVf:SUp"
