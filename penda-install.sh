@@ -24,9 +24,11 @@ if [ -d /data/data/com.termux/files/usr/share ];then
       cd ~/../usr/share/
       git clone https://github.com/krish-coder-24/Penda-Official.git penda_pl
       mv ~/../usr/share/penda_pl/penda ~/../usr/bin/
+      mv ~/../usr/share/penda_pl/penda-install /usr/bin/
       chmod +x ../bin/penda
       mkdir ~/.penda
       mv ~/../usr/share/penda_pl/penda-install.sh ~/.penda/ 
+      mv ~/../usr/share/penda_pl/update.sh ~/.penda/
       rm -r ~/penda_pl
       mv ~/../usr/share/penda_pl/manpage/penda.1 ~/../usr/share/man/man1/
       gzip man/man1/penda.1
@@ -46,10 +48,12 @@ elif [ -d /usr/share ];then
       cd /usr/share/
       git clone https://github.com/krish-coder-24/Penda-Official.git penda_pl
       mv /usr/share/penda_pl/penda /usr/bin/
+      mv /usr/share/penda_pl/penda-install /usr/bin/
       chmod +x ../bin/penda
       mkdir /home/kali/.penda
       rm -r /home/kali/penda_pl
       mv /usr/share/penda_pl/penda-install.sh /home/kali/.penda/
+      mv /usr/share/penda_pl/update.sh /home/kali/.penda/
       mv /usr/share/penda_pl/manpage/penda.1 /usr/share/man/man1/
       gzip man/man1/penda.1
       sudo mandb
