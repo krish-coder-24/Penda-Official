@@ -15,7 +15,7 @@ base = Data()
 try:
     if sys.argv[1] == "help":
         get.help()
-    elif sys.argv[1] == "uninstall":
+    if sys.argv[1] == "uninstall":
       if "--full" in sys.argv[2]:
          Uninstaller("Full")
       else:
