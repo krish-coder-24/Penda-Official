@@ -55,8 +55,7 @@ try:
           
        elif currentArgument in ("--uninstall"): 
           os.system(f"sudo bash {__path}/uninstall.sh")
-       elif currentArgument is None:
-          print("No argument Given")
+
 
 except getopt.error as err:
     err = str(err)
@@ -74,6 +73,9 @@ except getopt.error as err:
 except FileNotFoundError:
   pass
   print ("No such [File or Directory]")
+
+except IndexError:
+   print("No argument Given")
 
 except Exception as e:
   print ("\nError: ", e ,'\n')
