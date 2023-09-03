@@ -15,14 +15,17 @@ def Uninstaller(type):
       if type == "Safe":
          os.system("""
                   echo -e ${k}"Unistalling For Termux..."
-                  rm -r ~/../usr/share/penda_pl && rm ~/../usr/bin/penda
+                  cd
+                  rm -rf ../usr/share/penda_pl
+                  rm ../usr/bin/penda
                   echo -e ${h} "Succesfully Uninstalled !!"
                   """)
       elif type == "Full":
          os.system("""
                   echo -e ${k}"Unistalling For Termux..."
-                  rm -r ~/../usr/share/penda_pl && rm ~/../usr/bin/penda
-                  rm -r ~/.penda && rm ~/../usr/bin/penda-install
+                  cd
+                  rm -rf ../usr/share/penda_pl && rm ../usr/bin/penda
+                  rm -rf ~/.penda && rm ../usr/bin/penda-install
                   echo -e ${h} "Succesfully Uninstalled !!"
                   """)
 
@@ -30,13 +33,13 @@ def Uninstaller(type):
       if type == "Safe":
          os.system("""
                   echo -e ${k}"Unistalling Penda For Linux..."
-                  rm -r /usr/share/penda_pl && rm /usr/bin/penda
+                  sudo rm -rf /usr/share/penda_pl && rm /usr/bin/penda
                   echo -e ${h} "Succesfully Uninstalled !!"
                   """)
       elif type == "Full":
          os.system("""
                   echo -e ${k}"Unistalling Penda For Linux..."
-                  rm -r /usr/share/penda_pl && rm /usr/bin/penda
+                  sudo rm -rf /usr/share/penda_pl && rm /usr/bin/penda
                   rm -r /root/.penda && rm /usr/bin/penda-install
                   echo -e ${h} "Succesfully Uninstalled !!"
                   """)
