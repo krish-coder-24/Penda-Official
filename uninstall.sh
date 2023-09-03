@@ -11,17 +11,17 @@ n="\e[0m"         # netral          # neutral
 
 
 if [ -d /data/data/com.termux/files/usr/share/penda_pl ];then
-   echo "Do you want Uninstall it Completely (y/N)?  "
-   read $choice
-   if [ $choice == "N" || $choice == "n"];then
-      echo -e ${k}"Unistalling For Termux..."
-      rm -r ~/../usr/share/penda_pl && rm ~/../usr/bin/penda
-      echo -e ${h} "Succesfully Uninstalled !!"
-   elif [ $choice == "Y" || $choice == "y"];then
-      echo -e ${k}"Unistalling For Termux..."
-      rm -r ~/../usr/share/penda_pl && rm ~/../usr/bin/penda
-      rm -r ~/.penda && rm ~/../usr/bin/penda-install
-      echo -e ${h} "Succesfully Uninstalled !!"
+   # echo "Do you want Uninstall it Completely (y/N)?  "
+   # read $choice
+   # if [ $choice == "N" || $choice == "n"];then
+   echo -e ${k}"Unistalling For Termux..."
+   rm -r ~/../usr/share/penda_pl && rm ~/../usr/bin/penda
+   echo -e ${h} "Succesfully Uninstalled !!"
+   # elif [ $choice == "Y" || $choice == "y"];then
+   #    echo -e ${k}"Unistalling For Termux..."
+   #    rm -r ~/../usr/share/penda_pl && rm ~/../usr/bin/penda
+   #    rm -r ~/.penda && rm ~/../usr/bin/penda-install
+   #    echo -e ${h} "Succesfully Uninstalled !!"
 
 elif [ -d /usr/share/penda_pl ];then
    echo "Do you want Uninstall it Completely (y/N)?  "
