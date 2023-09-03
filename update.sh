@@ -18,7 +18,9 @@ if [ -d /data/data/com.termux/files ];then
    cd ~/../usr/share/penda_pl
    git pull
    cd
-   rm -rf ~/../usr/share/penda_pl/ && rm -rf ~/../usr/share/penda_pl/
+   rm -rf ~/../usr/share/penda_pl/ && rm -rf ~/../usr/share/penda_pl
+   cd
+   rm -rf ../usr/share/penda_pl
    bash penda-install
    echo -e ${h} "Succesfully Updated !!"
 
