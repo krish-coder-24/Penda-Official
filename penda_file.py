@@ -61,21 +61,27 @@ except getopt.error as err:
     err = str(err)
     err = err.replace('option', '')
     if "-f requires argument" in err:
-        print ("No file Specified !!")
+        print ("Error:  No file Specified !!")
+        print()
     elif "requires argument" in err:
         err = err.replace("requires argument", "")
-        print ("Option " + err + " Requires an Argument !!")
+        print ("Error:  Option " + err + " Requires an Argument !!\n")
     elif "not recognized" in err:
         err = err.replace("not recognized", "")
-        print ("No such Option: " + err)
+        print ("Error:  No such Option: " + err)
+        print()
     exit(1)
 
 except FileNotFoundError:
   pass
-  print ("No such [File or Directory]")
+  print ("\nError:  No such [File or Directory]\n")
 
 except IndexError:
-   print("No argument Given")
+   print("\nNo argument Given")
+   print()
+   print("Use [ -h or --help ] to see Full help message or Use \"man penda\" to see Penda manual page")
+   print("For file specify '-f' in Argument ..")
+   print()
 
 except Exception as e:
   print ("\nError: ", e ,'\n')
