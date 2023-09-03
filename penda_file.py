@@ -13,6 +13,9 @@ __path = os.getcwd()
 base = Data()
 
 try:
+   if sys.argv[1] == "help":
+      get.help()
+      
    arguments, values = getopt.getopt(argumentList, options, long_options)
    for currentArgument, currentValue in arguments:
        if currentArgument in ('-h', "--help"):
