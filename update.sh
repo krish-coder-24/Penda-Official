@@ -25,7 +25,9 @@ elif [ -d /usr/share/ ];then
    echo -e ${k} "Updating For kali ..."
    cd /usr/share/penda_pl
    git pull
-   exec penda-install.sh 
+   exec /home/kali/.penda/penda-install.sh 
+   exec /root/kali/.penda/penda-install.sh 
+   exec /root/
    echo -e ${h} "Succesfully Updated !!"
 
 fi
