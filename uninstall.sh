@@ -20,7 +20,7 @@ if [ -d /data/data/com.termux/files/usr/share/penda_pl ];then
    elif [ $choice == "Y" || $choice == "y"];then
       echo -e ${k}"Unistalling For Termux..."
       rm -r ~/../usr/share/penda_pl && rm ~/../usr/bin/penda
-      rm -r ~/.penda
+      rm -r ~/.penda && rm ~/../usr/bin/penda-install
       echo -e ${h} "Succesfully Uninstalled !!"
 
 elif [ -d /usr/share/penda_pl ];then
@@ -33,6 +33,6 @@ elif [ -d /usr/share/penda_pl ];then
    elif [ $choice == "Y" || $choice == "y"];then
       echo -e ${k}"Unistalling Penda For Linux..."
       rm -r /usr/share/penda_pl && rm /usr/bin/penda
-      rm -r /root/.penda
+      rm -r /root/.penda && rm /usr/bin/penda-install
       echo -e ${h} "Succesfully Uninstalled !!"
 fi

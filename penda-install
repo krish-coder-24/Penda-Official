@@ -27,7 +27,7 @@ if [ -d /data/data/com.termux/files/usr/share ];then
       mv ~/../usr/share/penda_pl/penda-install /usr/bin/
       chmod +x ../bin/penda
       mkdir ~/.penda
-      mv ~/../usr/share/penda_pl/penda-install.sh ~/.penda/ 
+      mv ~/../usr/share/penda_pl/penda-install ~/.penda/ 
       mv ~/../usr/share/penda_pl/update.sh ~/.penda/
       rm -r ~/penda_pl
       mv ~/../usr/share/penda_pl/manpage/penda.1 ~/../usr/share/man/man1/
@@ -52,7 +52,7 @@ elif [ -d /usr/share ];then
       chmod +x ../bin/penda
       mkdir /root/.penda
       rm -r /home/kali/penda_pl
-      mv /usr/share/penda_pl/penda-install.sh /root/.penda/
+      mv /usr/share/penda_pl/penda-install /root/.penda/
       mv /usr/share/penda_pl/update.sh /root/.penda/
       mv /usr/share/penda_pl/manpage/penda.1 /usr/share/man/man1/
       gzip man/man1/penda.1

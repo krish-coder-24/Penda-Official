@@ -20,7 +20,7 @@ if [ -d /data/data/com.termux/files ];then
    cd
    rm -r ~/../usr/share/penda_pl
    cd ~/.penda
-   exec bash ~/.penda/penda-install.sh
+   exec bash ~/.penda/penda-install
    echo -e ${h} "Succesfully Updated !!"
 
 elif [ -d /usr/share/ ];then
@@ -29,7 +29,7 @@ elif [ -d /usr/share/ ];then
    git pull
    cd
    rm -r /usr/share/penda_pl
-   exec bash /root/.penda/penda-install.sh 
+   exec bash /root/.penda/penda-install
    echo -e ${h} "Succesfully Updated !!"
 
 fi
