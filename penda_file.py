@@ -43,18 +43,18 @@ try:
           file.close()
 
        elif currentArgument in ('-S', "--shell"):
-          os.system(f"python {__path}/shell.py")
+         os.system(f"python {__path}/shell.py")
           
        elif currentArgument in ('-U', "--update"):
          if os.path.isfile("/usr/share/penda_pl/penda_file.py"):
             os.system(f"bash /root/.penda/update.sh")
-         elif os.path.isfile("/data/data/com.termux"):
+         elif os.path.isfile("/data/data/com.termux/files/usr/share/penda_pl/penda_file.py"):
             os.system("bash ~/.penda/update.sh")
          elif os.path.isfile("C:/Windows/System32"):
             os.system(f"bash {__path}/update.sh")
           
        elif currentArgument in ("--uninstall"): 
-          os.system(f"sudo bash {__path}/uninstall.sh")
+         os.system(f"sudo bash {__path}/uninstall.sh")
 
 
 except getopt.error as err:
