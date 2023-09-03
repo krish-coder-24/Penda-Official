@@ -26,8 +26,8 @@ if [ -d /data/data/com.termux/files/usr/share ];then
       mv ~/../usr/share/penda_pl/penda ~/../usr/bin/
       mv ~/../usr/share/penda_pl/penda-install /usr/bin/
       chmod +x ../bin/penda
+      chomd +x penda-install
       mkdir ~/.penda
-      mv ~/../usr/share/penda_pl/penda-install ~/.penda/ 
       mv ~/../usr/share/penda_pl/update.sh ~/.penda/
       rm -r ~/penda_pl
       mv ~/../usr/share/penda_pl/manpage/penda.1 ~/../usr/share/man/man1/
@@ -50,13 +50,14 @@ elif [ -d /usr/share ];then
       mv /usr/share/penda_pl/penda /usr/bin/
       mv /usr/share/penda_pl/penda-install /usr/bin/
       chmod +x ../bin/penda
+      chmod +x ../bin/penda-install
       mkdir /root/.penda
       rm -r /home/kali/penda_pl
-      mv /usr/share/penda_pl/penda-install /root/.penda/
       mv /usr/share/penda_pl/update.sh /root/.penda/
       mv /usr/share/penda_pl/manpage/penda.1 /usr/share/man/man1/
       gzip man/man1/penda.1
-      sudo mandb
+      sudo mandb > log.txt
+      rm log.txt
       cd
       echo -e ${h} "Succesfully Installed !!"
    fi
