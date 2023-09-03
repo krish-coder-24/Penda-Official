@@ -29,6 +29,6 @@ elif [ -d /usr/share/ ];then
    git pull
    cd
    rm -r /usr/share/penda_pl
-   penda-install
+   sudo bash penda-install
    echo -e ${h} "Succesfully Updated !!"
 fi

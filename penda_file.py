@@ -46,7 +46,7 @@ try:
           os.system(f"python {__path}/shell.py")
           
        elif currentArgument in ('-U', "--update"):
-         if os.path.isfile("/usr/share"):
+         if os.path.isfile("/usr/share/penda_pl/penda_file.py"):
             os.system(f"bash /root/.penda/update.sh")
          elif os.path.isfile("/data/data/com.termux"):
             os.system("bash ~/.penda/update.sh")
