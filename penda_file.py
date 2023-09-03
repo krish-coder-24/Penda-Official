@@ -88,7 +88,8 @@ except FileNotFoundError:
     pass
     print("\nError:  No such [File or Directory]\n")
 
-except IndexError:
+except IndexError as err:
+    print(err)
     print("\nNo argument Given")
     print()
     print(
