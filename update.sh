@@ -17,6 +17,7 @@ if [ -d /data/data/com.termux/files ];then
    echo -e ${k}"Updating For Termux..."
    cd ~/../usr/share/penda_pl 
    git pull
+   exec penda-install.sh 
    echo -e ${h} "Succesfully Updated !!"
 
 elif [ -d /usr/share/ ];then
