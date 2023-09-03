@@ -17,15 +17,19 @@ if [ -d /data/data/com.termux/files ];then
    echo -e ${k}"Updating For Termux..."
    cd ~/../usr/share/penda_pl 
    git pull
+   cd
+   rm -r ~/../usr/share/penda_pl
    cd ~/.penda
-   exec penda-install.sh 
+   exec bash ~/.penda/penda-install.sh
    echo -e ${h} "Succesfully Updated !!"
 
 elif [ -d /usr/share/ ];then
    echo -e ${k} "Updating For kali ..."
    cd /usr/share/penda_pl
    git pull
-   exec /root/.penda/penda-install.sh 
+   cd
+   rm -r /usr/share/penda_pl
+   exec bash /root/.penda/penda-install.sh 
    echo -e ${h} "Succesfully Updated !!"
 
 fi
