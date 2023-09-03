@@ -30,7 +30,7 @@ if [ -d /data/data/com.termux/files/usr/share ];then
       mkdir ~/.penda
       mv ~/../usr/share/penda_pl/update.sh ~/.penda/
       rm -r ~/penda_pl
-      mv ~/../usr/share/penda_pl/manpage/penda.1 ~/../usr/share/man/man1/
+      mv -f ~/../usr/share/penda_pl/manpage/penda.1 ~/../usr/share/man/man1/ 
       gzip man/man1/penda.1
       makewhatis /data/data/com.termux/files/usr/share/man
       cd
@@ -54,7 +54,7 @@ elif [ -d /usr/share ];then
       mkdir /root/.penda
       rm -r /home/kali/penda_pl
       mv /usr/share/penda_pl/update.sh /root/.penda/
-      mv /usr/share/penda_pl/manpage/penda.1 /usr/share/man/man1/
+      mv -f /usr/share/penda_pl/manpage/penda.1 /usr/share/man/man1/
       gzip man/man1/penda.1
       sudo mandb > log.txt
       rm log.txt
