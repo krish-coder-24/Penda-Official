@@ -12,14 +12,14 @@ lb="\e[1;34m"     # langit biru     # blue sky
 n="\e[0m"         # netral          # neutral
 w="\e[1;37m"
 
-###############################give Permissons,if not root user exit
 
-clear
+
 if [ -d /data/data/com.termux/files/usr/share ];then
    if [ -d /data/data/com.termux/files/usr/share/penda_pl ];then
       echo -e ${m} "Already Installed !!"
       exit 0
    else
+      clear
       echo -e ${k}"Installing For Termux..."
       cd ~/../usr/share/
       git clone https://github.com/krish-coder-24/Penda-Official.git penda_pl
@@ -29,9 +29,9 @@ if [ -d /data/data/com.termux/files/usr/share ];then
       chomd +x penda-install
       mkdir ~/.penda
       mv ~/../usr/share/penda_pl/update.sh ~/.penda/
-      rm -r ~/penda_pl
+      rm -r -f ~/Penda-Official
       mv -f ~/../usr/share/penda_pl/manpage/penda.1 ~/../usr/share/man/man1/
-      gzip -f man/man1/penda.1
+      gzip -ff man/man1/penda.1 
       makewhatis /data/data/com.termux/files/usr/share/man
       cd
       echo -e ${h} "Succesfully Installed !!"
@@ -52,7 +52,7 @@ elif [ -d /usr/share ];then
       chmod +x ../bin/penda
       chmod +x ../bin/penda-install
       mkdir /root/.penda
-      rm -r /home/kali/penda_pl
+      rm -r ~/Penda-Official
       mv /usr/share/penda_pl/update.sh /root/.penda/
       mv -f /usr/share/penda_pl/manpage/penda.1 /usr/share/man/man1/
       gzip -f man/man1/penda.1

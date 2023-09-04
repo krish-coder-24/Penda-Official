@@ -94,6 +94,7 @@ except IndexError as err:
     print()
     print(
         'Use [ -h or --help ] to see Full help message or Use "man penda" to see Penda manual page'
+        'Or use "-S" to enter Shelll mode'
     )
     print("For file specify '-f' in Argument ..")
     print()
