@@ -15,6 +15,8 @@ class get:
 
      -f     |   --file      Requires a file written in penda script
                             To execute.
+     -S     |   --shell     Opens Interactive shell of Penda script
+                            to use 
      -V     |   --version   Prints the version of program
      -U     |   --update    Updates to the latest version Of Penda
      -h     |   --help      Prints this help message

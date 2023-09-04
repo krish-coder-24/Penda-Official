@@ -1,4 +1,3 @@
-import os
 
 ##############################color
 m="\e[0;31m"      # merah           # red
