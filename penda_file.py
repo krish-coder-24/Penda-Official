@@ -17,7 +17,7 @@ try:
     if sys.argv[1] == "help":
         get.help()
     if sys.argv[1] == "uninstall":
-      if "--full" in sys.argv[2]:
+      if "--full" in argumentList:
          Uninstaller("Full")
       else:
         Uninstaller("Safe")

@@ -11,32 +11,35 @@ lb="\e[1;34m"     # langit biru     # blue sky
 n="\e[0m"         # netral          # neutral
 
 def Uninstaller(type):
-   if os.isfile("/data/data/com.termux/files/usr/share/penda_pl/penda_file.py"):
+   if os.path.isfile("/data/data/com.termux/files/usr/share/penda_pl/penda_file.py"):
       if type == "Safe":
          os.system("""
                   echo -e ${k}"Unistalling For Termux..."
-                  rm -r ~/../usr/share/penda_pl && rm ~/../usr/bin/penda
+                  cd
+                  rm -rf ../usr/share/penda_pl
+                  rm ../usr/bin/penda
                   echo -e ${h} "Succesfully Uninstalled !!"
                   """)
       elif type == "Full":
          os.system("""
                   echo -e ${k}"Unistalling For Termux..."
-                  rm -r ~/../usr/share/penda_pl && rm ~/../usr/bin/penda
-                  rm -r ~/.penda && rm ~/../usr/bin/penda-install
+                  cd
+                  rm -rf ../usr/share/penda_pl && rm ../usr/bin/penda
+                  rm -rf ~/.penda && rm ../usr/bin/penda-install
                   echo -e ${h} "Succesfully Uninstalled !!"
                   """)
 
-   elif os.isfile("/usr/share/penda_pl/penda_file.py"):
+   elif os.path.isfile("/usr/share/penda_pl/penda_file.py"):
       if type == "Safe":
          os.system("""
                   echo -e ${k}"Unistalling Penda For Linux..."
-                  rm -r /usr/share/penda_pl && rm /usr/bin/penda
+                  sudo rm -rf /usr/share/penda_pl && rm /usr/bin/penda
                   echo -e ${h} "Succesfully Uninstalled !!"
                   """)
       elif type == "Full":
          os.system("""
                   echo -e ${k}"Unistalling Penda For Linux..."
-                  rm -r /usr/share/penda_pl && rm /usr/bin/penda
+                  sudo rm -rf /usr/share/penda_pl && rm /usr/bin/penda
                   rm -r /root/.penda && rm /usr/bin/penda-install
                   echo -e ${h} "Succesfully Uninstalled !!"
                   """)
