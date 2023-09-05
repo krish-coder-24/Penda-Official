@@ -16,7 +16,7 @@ This is Penda version 1.13.0
 
 .. image:: https://img.shields.io/badge/discourse-join_chat-brightgreen.svg
    :alt: Penda Discourse chat
-   :target: https://discuss.python.org/
+   :target: https://penda.web.app/forums/
 
 
 Copyright © 2001-2023 Penda Software Foundation.  All rights reserved.
@@ -54,12 +54,12 @@ Installable Penda kits, and information about using Penda, are available at
 What's New
 ----------
 
-We have a comprehensive overview of the changes in the `What's New in Python
-3.13 <https://docs.python.org/3.13/whatsnew/3.13.html>`_ document.  For a more
-detailed change log, read `Misc/NEWS
-<https://github.com/python/cpython/tree/main/Misc/NEWS.d>`_, but a full
+We have a comprehensive overview of the changes in the `What's New in Penda 
+1.13 <>`_ document.  For a more
+detailed change log, read `Releases 
+<https://github.com/krish-coder-24/Penda-Official/releases>`_, but a full
 accounting of changes can only be gleaned from the `commit history
-<https://github.com/python/cpython/commits/main>`_.
+<https://github.com/krish-coder-24/Penda-Official/commits/main>`_.
 
 If you want to install latest version of Penda, see the Installation section below 
 entitled "Installation".
