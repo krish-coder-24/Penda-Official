@@ -1,4 +1,5 @@
 import os
+from colorama import Fore, Back, Style
 ##############################color
 m="\e[0;31m"      # merah           # red
 k="\e[0;33m"      # kuning          # yellow
@@ -13,37 +14,36 @@ n="\e[0m"         # netral          # neutral
 def Uninstaller(type):
    if os.path.isfile("/data/data/com.termux/files/usr/share/penda_pl/penda_file.py"):
       if type == "Safe":
+         print (Fore.RED + "Unistalling For Termux...")
          os.system("""
-                  echo -e ${k}"Unistalling For Termux..."
                   cd
                   rm -rf ../usr/share/penda_pl
                   rm ../usr/bin/penda
-                  echo -e ${h} "Succesfully Uninstalled !!"
                   """)
+         print (Fore.GREEN + "Succesfully Uninstalled !!")
       elif type == "Full":
+         print (Fore.RED + "Unistalling For Termux...")
          os.system("""
-                  echo -e ${k}"Unistalling For Termux..."
                   cd
                   rm -rf ../usr/share/penda_pl && rm ../usr/bin/penda
                   rm -rf ~/.penda && rm ../usr/bin/penda-install
-                  echo -e ${h} "Succesfully Uninstalled !!"
                   """)
+         print (Fore.GREEN + "Succesfully Uninstalled !!")
 
    elif os.path.isfile("/usr/share/penda_pl/penda_file.py"):
       if type == "Safe":
+         print (Fore.RED + "Unistalling Penda For Linux...")
          os.system("""
-                  echo -e ${k}"Unistalling Penda For Linux..."
                   sudo rm -rf /usr/share/penda_pl && rm /usr/bin/penda
-                  echo -e ${h} "Succesfully Uninstalled !!"
                   """)
+         print (Fore.GREEN + "Succesfully Uninstalled !!")
       elif type == "Full":
+         print (Fore.RED + "Unistalling Penda For Linux...")
          os.system("""
-                  echo -e ${k}"Unistalling Penda For Linux..."
                   sudo rm -rf /usr/share/penda_pl && rm /usr/bin/penda
                   rm -r /root/.penda && rm /usr/bin/penda-install
-                  echo -e ${h} "Succesfully Uninstalled !!"
                   """)
-
+         print (Fore.GREEN + "Succesfully Uninstalled !!")
 
 
 # if [ -d /data/data/com.termux/files/usr/share/penda_pl ];then
