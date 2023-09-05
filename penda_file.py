@@ -89,12 +89,12 @@ except FileNotFoundError:
     print("\nError:  No such [File or Directory]\n")
 
 except IndexError as err:
-    print("Error" ,err)
+    # print("Error" ,err)
     print("\nNo argument Given")
     print()
     print(
         'Use [ -h or --help ] to see Full help message or Use "man penda" to see Penda manual page'
-        'Or use "-S" to enter Shelll mode'
+        '\nOr use "-S" to enter Shelll mode'
     )
     print("For file specify '-f' in Argument ..")
     print()
