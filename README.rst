@@ -11,7 +11,7 @@ This is Penda version 1.13.0
 
 .. image:: https://dev.azure.com/python/cpython/_apis/build/status/Azure%20Pipelines%20CI?branchName=main
    :alt: CPython build status on Azure DevOps
-   :target: https://dev.azure.com/python/cpython/_build/latest?definitionId=4&branchName=main
+   :target: https://dev.azure.com/Penda-Official/Penda/_build/latest?definitionId=4&branchName=main
 
 .. image:: https://img.shields.io/badge/discourse-join_chat-brightgreen.svg
    :alt: Python Discourse chat
