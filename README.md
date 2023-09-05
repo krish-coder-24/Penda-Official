@@ -26,6 +26,5 @@ git clone https://github.com/krish-coder-24/Penda-Official && cd Penda-Official 
 #
 ## | Windows
 ### **For Windows installation**
-## First Download the Official Penda Installer to download it just click the Link below 
-#### [Visit Site ..](www.google.com)
+#### First Download the Official Penda Installer to download it just clicking Download --> [Download](www.google.com)
 
