@@ -1,1 +1,25 @@
-#
+#/usr/bin/bash
+
+if [ -d /usr/share/penda_pl ];then
+      echo -e ${m} "Already Installed !!"
+      exit 0
+
+else
+      [[ `id -u` -eq 0 ]] > /dev/null 2>&1 || { echo -e ${m} "You must be root to run the script${n}"; echo ; exit 1; }
+      echo -e ${k} "Installing For kali ..."
+      cd /usr/share/
+      git clone https://github.com/krish-coder-24/Penda-Official.git penda_pl
+      mv /usr/share/penda_pl/penda /usr/bin/
+      mv /usr/share/penda_pl/penda-install /usr/bin/
+      chmod +x ../bin/penda
+      chmod +x ../bin/penda-install
+      mkdir /root/.penda
+      rm -r ~/Penda-Official
+      mv /usr/share/penda_pl/update.sh /root/.penda/
+      mv -f /usr/share/penda_pl/manpage/penda.1 /usr/share/man/man1/
+      gzip -f man/man1/penda.1
+      sudo mandb > log.txt
+      rm log.txt
+      cd
+      echo -e ${h} "Succesfully Installed !!"
+fi
