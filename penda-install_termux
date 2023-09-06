@@ -1,0 +1,24 @@
+#!~/../usr/bin/bash
+
+if [ -d /data/data/com.termux/files/usr/share/penda_pl ];then
+      echo -e ${m} "Already Installed !!"
+      exit 0
+else
+      clear
+      echo -e ${k}"Installing For Termux..."
+      cd ~/../usr/share/
+      git clone https://github.com/krish-coder-24/Penda-Official.git penda_pl
+      cd
+      mv ../usr/share/penda_pl/penda ../usr/bin/
+      mv ../usr/share/penda_pl/penda-install ../usr/bin/
+      chmod +x ../bin/penda
+      chomd +x ../penda-install
+      mkdir .penda
+      mv ../usr/share/penda_pl/update.sh .penda/
+      rm -rf ~/Penda-Official
+      mv -f ../usr/share/penda_pl/manpage/penda.1 ../usr/share/man/man1/
+      gzip -ff ../usr/share/man/man1/penda.1 
+      makewhatis /data/data/com.termux/files/usr/share/man
+      cd
+      echo -e ${h} "Succesfully Installed !!"
+fi
