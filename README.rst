@@ -87,14 +87,14 @@ Kali Linux & Termux & Debian
 
 .. code-block:: sh
 
-   bash penda-install
+   bash install.sh
 
 | One - Line Installation 
 +++++++++++++++++++++++++
 
 .. code-block:: sh
 
-   git clone https://github.com/krish-coder-24/Penda-Official && cd Penda-Official && bash penda-install 
+   git clone https://github.com/krish-coder-24/Penda-Official && cd Penda-Official && bash install.sh | sudo bash install.sh
 
 
 Windows
