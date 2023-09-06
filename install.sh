@@ -15,14 +15,14 @@ w="\e[1;37m"
 
 
 if [ -d /data/data/com.termux/files/usr/share ];then
-   echo -e ${k} "Installing For kali ..."
+   echo -e ${k} "Installing For Termux ..."
    cd ~/../usr/share/
    git clone https://github.com/krish-coder-24/Penda-Official.git penda_pl
    cd penda_pl
    mv penda-install_termux penda-install 
    bash penda-install
    rm penda-install_kali
-   rm penda-install
+   rm install.sh
 
 elif [ -d /usr/share ];then
    if [ -d /usr/share/penda_pl ];then
@@ -34,18 +34,10 @@ elif [ -d /usr/share ];then
       echo -e ${k} "Installing For kali ..."
       cd /usr/share/
       git clone https://github.com/krish-coder-24/Penda-Official.git penda_pl
-      mv /usr/share/penda_pl/penda /usr/bin/
-      mv /usr/share/penda_pl/penda-install /usr/bin/
-      chmod +x ../bin/penda
-      chmod +x ../bin/penda-install
-      mkdir /root/.penda
-      rm -r ~/Penda-Official
-      mv /usr/share/penda_pl/update.sh /root/.penda/
-      mv -f /usr/share/penda_pl/manpage/penda.1 /usr/share/man/man1/
-      gzip -f man/man1/penda.1
-      sudo mandb > log.txt
-      rm log.txt
-      cd
-      echo -e ${h} "Succesfully Installed !!"
+      cd penda_pl 
+      mv penda-install_kali penda-install 
+      bash penda-install 
+      rm penda-install_termux 
+      rm install.sh
    fi
 fi
